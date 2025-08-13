@@ -1,0 +1,14 @@
+{
+  "name": "chat-app-react-nodejs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd public && npm start",
+    "build": "cd public && npm run build" },
+
+  "dependencies": {
+    "concurrently": "^9.2.0"
+  }
+}

@@ -7,7 +7,7 @@ const app = express();
 const socket = require("socket.io");
 require("dotenv").config();
 
-app.use(cors());
+app.use(cors({origin:"http://localhost:3000"}));
 app.use(express.json());
 
 
@@ -26,7 +26,7 @@ mongoose
     console.log(err.message);
   });
 
-app.get("/ping", (_req, res) => {
+app.get("/", (_req, res) => {
   return res.json({ msg: "Ping Successful" });
 });
 
