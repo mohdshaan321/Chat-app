@@ -7,7 +7,7 @@ const app = express();
 const socket = require("socket.io");
 require("dotenv").config();
 
-app.use(cors({ origin: ['http://localhost:3000', 'chat-app-sandy-nine.vercel.app'],
+app.use(cors({  origin: 'https://chat-app-sandy-nine.vercel.app',
   credentials: true,}));
 app.use(express.json());
 
