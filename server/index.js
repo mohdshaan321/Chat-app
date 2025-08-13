@@ -7,7 +7,8 @@ const app = express();
 const socket = require("socket.io");
 require("dotenv").config();
 
-app.use(cors({origin:"http://localhost:3000"}));
+app.use(cors({ origin: ['http://localhost:3000', 'https://chat-app-eosin-theta.vercel.app'],
+  credentials: true,}));
 app.use(express.json());
 
 
